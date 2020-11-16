@@ -19,7 +19,5 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: a14907/wdqrsshub
           tag_with_ref: true
-      - name: tagimage
-        run: docker tag a14907/wdqrsshub:latest a14907/wdqrsshub:${{ github.event.inputs.tagname }}
-      - run: docker push a14907/wdqrsshub:${{ github.event.inputs.tagname }}
+          tags: ${{ github.event.inputs.tagname }}
         
