@@ -35,7 +35,7 @@ RUN if [ "$PUPPETEER_SKIP_CHROMIUM_DOWNLOAD" = 0 ]; then \
   && npm install --production && sh ./clean-nm.sh;\
   else \
   export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true && \
-  npm install --production && sh ./clean-nm.sh;\
+  npm install && sh ./clean-nm.sh;\
   fi;
 
 COPY . /app
